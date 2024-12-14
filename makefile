@@ -1,4 +1,4 @@
-PKG:=PACKAGE_NAME
+PKG:=rufffmt
 EXTRAS:=dev
 
 UV:=$(shell uv --version)
@@ -36,6 +36,3 @@ clean:
 
 distclean: clean
 	rm -rf .venv
-
-init:
-	@python init.py
