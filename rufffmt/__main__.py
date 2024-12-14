@@ -2,9 +2,7 @@
 # Licensed under the MIT license
 
 
-def main() -> None:
-    pass
-
+from rufffmt.cli import main
 
 if __name__ == "__main__":
     main()
