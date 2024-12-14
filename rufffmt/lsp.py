@@ -4,11 +4,11 @@
 from pathlib import Path
 
 from lsprotocol.types import (
+    TEXT_DOCUMENT_FORMATTING,
     DocumentFormattingParams,
     MessageType,
     Position,
     Range,
-    TEXT_DOCUMENT_FORMATTING,
     TextEdit,
 )
 from pygls.server import LanguageServer
