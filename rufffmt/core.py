@@ -23,7 +23,7 @@ def which() -> Path:
     return path
 
 
-def ruff(*args: str | Path, stdin: str | None) -> subprocess.CompletedProcess:
+def ruff(*args: str | Path, stdin: str | None) -> subprocess.CompletedProcess[str]:
     """
     Run the ruff binary with the given args and optional stdin.
     """

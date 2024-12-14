@@ -21,8 +21,8 @@ venv: .venv
 	echo 'run `source .venv/bin/activate` to activate virtualenv'
 
 test:
-	python -m unittest -v $(PKG)
-	python -m mypy -p $(PKG)
+	python -m $(PKG).tests
+	python -m mypy --non-interactive --install-types -p $(PKG)
 
 lint:
 	python -m flake8 $(PKG)

@@ -6,7 +6,6 @@ import sys
 from pathlib import Path
 
 import click
-
 import trailrunner
 from click_fuzzy import FuzzyCommandGroup
 

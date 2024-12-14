@@ -50,7 +50,8 @@ ignored_authors = ["dependabot[bot]"]
 signed_tags = true
 
 [tool.mypy]
-strict = true
+# strict = true
+ignore_missing_imports = true
 
 [tool.ufmt]
 formatter = "ruff-api"

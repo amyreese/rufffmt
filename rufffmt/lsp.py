@@ -46,5 +46,6 @@ def rufffmt_lsp() -> LanguageServer:
             ]
         except Exception as e:
             ls.show_message(f"Formatting failed: {str(e)}", MessageType.Error)
+            return []
 
     return server
