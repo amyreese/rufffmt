@@ -48,3 +48,13 @@ def format(paths: list[Path], stdin_filename: Path | None) -> None:
     else:
         trailrunner.walk_and_run(paths, rufffmt_file)
         print("done", file=sys.stderr)
+
+
+@main.command("lsp")
+def lsp() -> None:
+    """
+    Start a formatting language server
+    """
+    from .lsp import rufffmt_lsp
+
+    rufffmt_lsp().start_io()

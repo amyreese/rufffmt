@@ -12,6 +12,9 @@ log = logging.getLogger(__name__)
 
 @cache
 def which() -> Path:
+    """
+    Find the appropriate ruff binary.
+    """
     from ruff.__main__ import find_ruff_bin
 
     path = Path(find_ruff_bin())
@@ -24,7 +27,7 @@ def ruff(*args: str | Path, stdin: str | None) -> subprocess.CompletedProcess:
     """
     Run the ruff binary with the given args and optional stdin.
     """
-    cmd = (str(which()), *(str(a) for a in args))
+    cmd = [str(a) for a in (which(), *args)]
     log.debug("running ruff: $ %s", shlex.join(cmd))
     proc = subprocess.run(cmd, input=stdin, check=True, text=True, capture_output=True)
     return proc
