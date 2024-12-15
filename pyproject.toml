@@ -24,7 +24,7 @@ dev = [
     "attribution>=1.8",
     "build>=1.2",
     "flake8==7.1.1",
-    "mypy==1.11.2",
+    "mypy==1.13.0",
     "ufmt==2.8.0",
     "ruff-api==0.1.0",
 ]
