@@ -2,7 +2,7 @@
 # Licensed under the MIT license
 
 """
-Minimal formatting LSP wrapping Ruff CLI
+Atomic formatting and import sorting with Ruff
 """
 
 from .__version__ import __version__
